@@ -24,12 +24,50 @@ h2 {
     font-weight: 400;
 }
 
+#title {
+    margin: 0 auto 10px auto;
+    padding: 5px;
+    width: 70%;
+    color: black;
+}
+
+.sticky {
+    position: sticky;
+    top:0px;
+    background-color:black;
+    color: #f2f2f2;
+    margin-bottom: 10px;
+    margin-left: -10px;
+    margin-right: -10px;
+    text-align: center;
+    padding:5px;
+    font-size: 2em;
+}
+
 .content {
     background-color: #f2f2f2;
     width: 90%;
     border: 5px;
     margin: 0 auto;
     padding: 10px 0px 10px 0px;
+}
+
+.about {
+    border-radius: 15px;
+    background-color: #f2f2f2;
+    text-align: center;
+    box-shadow: lightgray 0 0 75px;
+    padding: 20% 0% 3% 0%;
+    margin: 2%;
+}
+
+#about-page {
+    padding: 2% 0% 3% 0%;
+}
+
+#about-title { 
+    color: black;
+    font-size: 3em;
 }
 
 .card {
@@ -53,22 +91,13 @@ h2 {
     padding-bottom:3%;
 }
 
-.about {
-    border-radius: 15px;
+#projects {
     background-color: #f2f2f2;
-    text-align: center;
-    box-shadow: lightgray 0 0 75px;
-    padding: 20% 0% 3% 0%;
-    margin: 2%;
-}
-
-#about-page {
-    padding: 2% 0% 3% 0%;
-}
-
-#about-title { 
-    color: black;
-    font-size: 3em;
+    width: 90%;
+    margin: 10px auto 10px auto;
+    text-align: left;
+    padding: 2%;
+    padding-bottom:3%; 
 }
 
 .img_container { 
@@ -80,12 +109,15 @@ h2 {
     margin: 25px;
     border-radius: 15px;
 }
- 
-#title {
-    margin: 0 auto 10px auto;
-    padding: 5px;
-    width: 70%;
-    color: black;
+
+.img_container_b { 
+    float: left;
+    border-radius: 0%;
+    width: 250px;
+    border-radius: 50%;
+    border: 4px solid black;
+    margin: 25px;
+    border-radius: 15px;
 }
 
 .card .avatar {
@@ -109,19 +141,6 @@ h2 {
 .contacts li a img:hover {
     opacity: 0.5;
     transition: opacity ease-in-out 0.2s;
-}
-
-.sticky {
-    position: sticky;
-    top:0px;
-    background-color:black;
-    color: #f2f2f2;
-    margin-bottom: 10px;
-    margin-left: -10px;
-    margin-right: -10px;
-    text-align: center;
-    padding:5px;
-    font-size: 2em;
 }
 
 #text a:-webkit-any-link {
