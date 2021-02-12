@@ -68,7 +68,16 @@ h2 {
     padding: 2% 0% 3% 0%;
 }
 
+#portfolio-page {
+    padding: 2% 0% 3% 0%;
+}
+
 #about-title { 
+    color: #065656;
+    font-size: 3em;
+}
+
+#portfolio-title { 
     color: #065656;
     font-size: 3em;
 }
