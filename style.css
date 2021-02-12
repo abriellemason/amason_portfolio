@@ -1,10 +1,11 @@
 html {
-    background: #f2f2f2;
+    background: #f1f1f1;
 }
 
 body {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color: #f2f2f2;
+    font-family: "Raleway", sans-serif;
+    background-color: #f1f1f1;
+    color: #44546a;
     margin-top: 0px;
 }
 
@@ -13,8 +14,9 @@ img {
 }
 
 h1 {
+    font-family: "Fredoka One", sans-serif;
     margin:10px 0;
-    color: #4fe9e3;
+    color: #065656;
     text-align: center;
 }
 
@@ -27,14 +29,14 @@ h2 {
     margin: 0 auto 10px auto;
     padding: 5px;
     width: 70%;
-    color: black;
+    color: #44546A;
 }
 
 .sticky {
     position: sticky;
     top:0px;
-    background-color:black;
-    color: #f2f2f2;
+    background-color:#f1f1f1;
+    color: #44546A;
     margin-bottom: 10px;
     margin-left: -10px;
     margin-right: -10px;
@@ -44,7 +46,7 @@ h2 {
 }
 
 .content {
-    background-color: #f2f2f2;
+    background-color: #f1f1f1;
     width: 90%;
     border: 5px;
     margin: 0 auto;
@@ -53,11 +55,13 @@ h2 {
 
 .about {
     border-radius: 15px;
-    background-color: #f2f2f2;
+    background-color: #f1f1f1;
     text-align: center;
     box-shadow: lightgray 0 0 75px;
     padding: 20% 0% 3% 0%;
     margin: 2%;
+    font-family: "Fredoka One",  sans-serif;
+    color: #065656;
 }
 
 #about-page {
@@ -65,23 +69,25 @@ h2 {
 }
 
 #about-title { 
-    color: black;
+    color: #44546A;
     font-size: 3em;
 }
 
 .card {
-    background-color: #f2f2f2;
+    background-color: #f1f1f1;
+    color: #44546A;
+    font-family: Raleway, sans-serif;
     border-radius: 15px;
     text-align: center;
     width: 40%;
     height: 50%;
     padding: 40px 0px 0px 0px;
-    border: 3px solid black;
+    border: 3px solid #44546A;
     margin: 100px auto 30px auto;
 }
 
 #text {
-    background-color: #f2f2f2;
+    background-color: #f1f1f1;
     width: 90%;
     margin: 10px auto 10px auto;
     text-align: left;
@@ -103,7 +109,7 @@ h2 {
     border-radius: 0%;
     width: 250px;
     border-radius: 50%;
-    border: 4px solid black;
+    border: 4px solid #44546A;
     margin: 25px;
     border-radius: 15px;
 }
@@ -113,7 +119,7 @@ h2 {
     border-radius: 0%;
     width: 250px;
     border-radius: 50%;
-    border: 4px solid black;
+    border: 4px solid #44546A;
     margin: 25px;
     border-radius: 15px;
 }
@@ -122,7 +128,7 @@ h2 {
     width: 250px;
     border-radius: 75%;
     margin-top: -250px;
-    border: 3px solid black;
+    border: 3px solid #44546A;
 }
 
 .contacts {
@@ -154,13 +160,13 @@ h2 {
 }
 
 a:-webkit-any-link {
-    color: #f2f2f2;
+    color: #44546A;
     cursor: pointer;
     text-decoration-line: None;
 }
 
 a:hover {
-    color: #4fe9e3;
+    color: #4FE9E3;
 }
 
 @media (max-width: 500px) {
@@ -169,13 +175,13 @@ a:hover {
         width: 140px;
         border-radius: 50%;
         margin-top: -300px;
-        border: 3px solid black;
+        border: 3px solid #44546A;
     }
 
     .sticky {
         position: sticky;
         top:0px;
-        background-color: black;
+        background-color: #44546A;
         color: #f2f2f2;
         margin-bottom: 10px;
         margin-left: -10px;
@@ -188,7 +194,7 @@ a:hover {
     .img_container { 
         float: none;
         width: 200px;
-        border: 3px solid black;
+        border: 3px solid #44546A;
         margin: 5% auto 5% auto;
         border-radius: 15px;
         display:block;
