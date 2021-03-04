@@ -21,287 +21,138 @@
         <div class="about" id="portfolio-page">
             <h1 id="portfolio-title">PORTFOLIO</h1>
             <div class="card" id="text">
-                <h2 class="lights-title">Interactive LED Board - Independent Study in User Experience</h2>
+                <h2 class="lights-title">ndependent Project: Interactive LED Board</h2>
+                <p>Designing a multipurpose interactive light display for a unique user experience</p>
+
                 <img class="img_container" id="led-board" src="images/led-board.jpg" alt="LED Light Board">
-                <p>
-                    Location: Michigan State University, Independent Study
-                </p>
-                <p>
-                    Date: Sept 2020 - Present
-                </p>
-                <p>
-                    Collaborators: Nick Kopec, Dr. Andrew Mason
-                </p>
-                <p>
-                    Goal: The project was inspired by an LED equalizer I had seen once before and I decided to expand on that idea. The goals were to design and build a physical prototype display of 900 LEDs that could a) transcribe 30x30 pixel images, b) detect distance using ultrasonic sensors, c) detect sound using microphone sensors and display this information through the LEDs using Teensy 4.1. The board was designed to be placed up on the wall, similar to a painting, and be interactive to the audience.
-                </p>
-                <p>
-                    Roles: My roles included pitching the idea, designing the board, collecting the parts needed for this project, building the board, soldering LED strips to power, data and ground wires, drawing 30x30 pixel images, converting the images into a format compatible with Teensy 4.1, testing the lights many, many times, and writing a report on the project. I had many roles in this project that were very new to me and took time to understand how to carry out the role but in the end I was able to accomplish what I set out to do.
-                </p>
-                <p>
-                    Outcomes: The final results of the project were at least getting the lights to all display the same color, display an equalizer - a range of frequencies detected by microphone sensors - and a sequence of moving images, including a moonrise. I was hoping to write some algorithms for the lights to display, however, the soldering portion took much longer than expected. I ended up resoldering every single strip to data, power, and ground to shorten data lag between each strip. In the end, I did successfully create an interactive board of 900 LED lights.
-                </p>
-                <p>
-                    What I Learned: I learned that no matter how much you plan, there are always obstacles and plans need to be flexible. What I learned from this project is how data is transferred, how electrical current works, and how to quickly learn programming and electrical engineering jargon on the spot. I acquired new skillsets in soldering and drawing out recognizable images in a few pixels, such as a firework. 
-                </p>
+                <p>Location: Michigan State University, Independent Study</p>
+                <p>Date: Sept 2020 - Present</p>
+                <p>Collaborators: Nick Kopec (Technical Lead), Dr. Andrew Mason (Supervisor)</p>
+                <p>My role: Project Lead, UX Design, Physical Construction Design</p>
+                <h3>The Challenge: How can one visualize the senses through light?</h3>
+                <p>How can LED lights best display one’s interactions with sensors using the senses, such as sound, motion, and heat?</p>
+                <p>The goal of this project was to explore the vast possibilities of interaction with LED lights. Some of these possibilities included transcribing 30x30 pixel images, detecting distance using ultrasonic sensors, detecting sound using microphone sensors and finally to display informaiton using a Teensy 4.1.</p>
+                <p>I helped initiate, designed, and led this project for the benefit of those who enjoy interactive light displays. This project was inspired by Cyberdog, a store in Camden Town District of London, WNDR Museum in Chicago, Illinois, and other unique light displays I have come across while traveling.</p>
+                <h3>Design Process</h3>
+                <p><strong>Ideation: </strong>Brainstorming unique user experiences. How are the LED lights going to be displayed? What parts do we need? How can we make all the parts work together?</p>
+                <p><strong>Design: </strong>Constuction of the physical display board. Designing pixel images. Installing and testing sensors.</p>
+                <p><strong>Conclusion: </strong>Broader implications. Limitations. Future Work.</p>
+                <h3>Ideation</h3>
+                <p><strong>Brainstorming</strong> - I have always been interested in music and lights, especially the combination of both in music festivals and Christmas light shows. I thought it would be interesting to build a wall of lights that could show the range of music in the form of an equalizer. When I visited Cyberdog in Camden Town, London, I was fascinated by their large LED equalizer that spanned the wall behind the DJ booth. At the WNDR museum in Chicago, I enjoyed watching the floor light up as I stepped acros to get to the other side. I also experienced a wall depicting my movements using a heat sensor and projector. I then thought, "Wouldn't it be cool to have all these components together on a large set of LEDs?" That idea was shared with Dr. Mason and Nick. As we discussed it, they both agreed it would be a unique and interesting project and decided to help me persue my idea.</p>
+                <p><strong>Parts</strong> - What parts are we going to need for this project? How much should we invest in this project?</p>
+                <p>First and foremost, we had to decide what parts we were going to need to complete this project. We wanted to use sensors but had to decide which were worth investing in and how many were reasonable to have working by December. We also had to think about how close we wanted the LEDs to be to one another. We had to think of what we needed to construct the board for the lights to be displayed on as well.</p>
+                <p><strong>Layout Design</strong> - The first major issue we needed to solve is how big we were planning to make this light display. After multiple discussions, we decided to go with a 4x5 foot wooden display, something similar to a Polaroid photo layout but much bigger. We also decided to use a total of 900 LEDs, which ended up being extremely bright even at 50% brightness. We designed the board to be longer than it was wide because we wanted to store the power supply, Teensy, switches, sensors, and wires all below the lights to allow easy access for maintenance and controls.</p>
+                <p><strong>Function Design</strong> - How are all the parts going to work?</p>
+                <p>I soldered power, ground and data to each strip of lights and soldered each strip of lights to the next. The strips were then attached to the board usinga combination of tape and glue. Next, the power and ground were attached to busses that connected directly to the power supply which in turn was hooked up to a power switch. Data was connected to the Teensy, which was given commands via an SD card. The sensors were also connected to the Teensy.</p>
+                <h3>Design</h3>
+                <p><strong>Physical Construction</strong> - The board was assembled by Dr. Mason and myself. We constructed a wooden board using screws and painted it white to help enhance the light of the LEDs. We used plywood as the backboard for the LED strips to attach to later on. We had to add a supprt beam down the middle of the plywood backboard due to beveling. The sides were left longer at the bottom to accomodate the many working parts that would be situated within that section of the board.</p>
+                <p><strong>Designing Digital Images</strong> - How can I make realistic images of something using a 30x30 pixel grid? How can I show change?</p>
+                <p>What image would you like to see displayed by LEDs? That was the first question I had to ask myself. I originally wanted to see a palm tree swaying in the wind, however, that later proved to be more difficult than I thought. I uded Paint.net to create a 30x30 grid. Each pixel represented an LED on the board. You might think 900 pixels is a lot but once you start trying to construct an image with only 900 pixels, it quickly becomes much smaller than you anticipated. My first design was a basic pattern - an X that changes into a square, and a square that fills the whole board. Next, I tried a firework starting at the bottom, moving to the top, and exploding into a lovely array of lights. Then I tried a Christmas tree with Christmas lights that flickered on and off. My hardest works were a sunrise over a valley and a sunset over the ocean. What I saw in the 30x30 pixels on my laptop were very different when they were displayed using the LED lights. Larger images were much easier to recognize.</p>
+                <p><strong>Installing + Testing Sensors</strong> - Where will the sensors be placed? How can we eliminate discrepencies?</p>
+                <p>Once the board was constructed and LED strips were attached, sensors needed to be added to the board. We were careful not to place them in locations where interference would disrupt their capabilities. For example, we designed a 3D printed box for the microphones and ultrasound sensor. </p>
+                <h3>Conclusion</h3>
+                <p><strong>Broader Functionality</strong> - This project was designed to have more functionality than what Nick and I were able to contribute to the LED light display. More sensors could be added to give users more ways to interact with the light board. This is not your ordinary equalizer.</p>
+                <p><strong>Limitations</strong> - Some of the limitations we faced were inexperience, shorting wires, time constraints, and limited man hours. In the earlier weeks of the project, I learned how to solder wires together for the first time ever. I eventually got the hang of it, however, it took longer than expected. After all the wiring was completed, we had a small incident where a set of wires were short circiuted in which case I had to pull the wires and replace them with new ones. We were able to salvage some of the damaged wires. After we had the board constructed and the lights properly running a simple test, we only had a few weeks to complete anythign else we hoped to complete. Of course both Nick and I were interested in working beyond our time frame to see what else we could get done with this project and opted to continue work into the spring. However, it became much harder to continue work with finals coming up.</p>
+                <p><strong>Future Work</strong> - This project is a continuous work for future students to invest their time and talents. The project was designed to see how far we could get for now and have some working interactive sensors but ultimately be flexible. The light display has much room for improvement. I am continuing my efforts to add and test more sensors to see how we can display other avenues, such as heat or UV detection. This project has come a long way since the initial ideation phase but has a ways to go before it could be sold to mass markets.</p>
             </div>
             <div class="card" id="text">
                 <h2 class="poster-title">Mid-Sure 2020 - Research on Email Addresses</h2>
                 <img class="img_container_b" id="midsure" src="images/midsure-poster.png" alt="Mid-SURE 2020 Poster">
-                <p>
-                    Location: Michigan State University, Behavior, Information, and Technologies Lab
-                </p>
-                <p>
-                    Date: June 2020 - Aug 2020
-                </p>
-                <p>
-                    Collaborators: Anjali Munasinghe, Dr. Emilee Rader
-                </p>
-                <p>
-                    Goal: The goal of this project was to take existing data, analyze it, and present the best findings to Mid-SURE. The research topic was focusing on people's willingness to give out an email that was not their own and maybe not knowing they could potentially be giving out someone else's email address and unintentionally spamming them with junk mail.
-                </p>
-                <p>
-                    Roles: My roles for this project included transcribing previously recorded interviews, anonymize the participants, create codes - short titles for reoccuring topics - in NVivo, analyzing the transcriptions on NVivo, organizing the findings in order of relevance and popularity, writing a report on my findings, designing a poster summarizing these findings, and finally presenting these findings via video format.
-                </p>
-                <p>
-                    Outcomes: The outcomes were somewhat all over the place. As you can see on my poster <a href ="midsure-poster.pdf">here</a>, there were a number of cases where it was merely a tie between doing something one way or the other. The findingers were particularly interesting, however, because there are many people who receive emails from someone or a company that the person receiving has no affiliation and we found that some people could be responsible for this occurrance. It was a very interesting find to say the least. You can watch my presentation <a href="https://youtu.be/EmXxoj7ed4s">here</a>.
-                </p>
-                <p>
-                    What I Learned: Some key takeaways were that most people dislike being asked to give out an email address and at the same time people also feel compelled to provide an email address because they feel they are helping someone else in doing so. Some new skills I gained from this experience was how to create codes in NVivo, filtering out irrelevant findings, how to design a poster that resembles an email inbox, 
-                    and how to record and create videos usign Camtasia.
-                </p>
+                <p>Location: Michigan State University, Behavior, Information, and Technologies Lab</p>
+                <p>Date: June 2020 - Aug 2020</p>
+                <p>Collaborators: Anjali Munasinghe, Dr. Emilee Rader</p>
+                <p>Goal: The goal of this project was to take existing data, analyze it, and present the best findings to Mid-SURE. The research topic was focusing on people's willingness to give out an email that was not their own and maybe not knowing they could potentially be giving out someone else's email address and unintentionally spamming them with junk mail.</p>
+                <p>Roles: My roles for this project included transcribing previously recorded interviews, anonymize the participants, create codes - short titles for reoccuring topics - in NVivo, analyzing the transcriptions on NVivo, organizing the findings in order of relevance and popularity, writing a report on my findings, designing a poster summarizing these findings, and finally presenting these findings via video format.</p>
+                <p>Outcomes: The outcomes were somewhat all over the place. As you can see on my poster <a href ="midsure-poster.pdf">here</a>, there were a number of cases where it was merely a tie between doing something one way or the other. The findingers were particularly interesting, however, because there are many people who receive emails from someone or a company that the person receiving has no affiliation and we found that some people could be responsible for this occurrance. It was a very interesting find to say the least. You can watch my presentation <a href="https://youtu.be/EmXxoj7ed4s">here</a>.</p>
+                <p>What I Learned: Some key takeaways were that most people dislike being asked to give out an email address and at the same time people also feel compelled to provide an email address because they feel they are helping someone else in doing so. Some new skills I gained from this experience was how to create codes in NVivo, filtering out irrelevant findings, how to design a poster that resembles an email inbox, and how to record and create videos usign Camtasia.</p>
             </div>
             <div class="card" id="text">
                 <h2 class="diagram-title">Case Study: Helping MSU Integrative Biology Students Succeed </h2>
                 <p>Supporting student success at Michigan State University with a human-centered website redesign</p>
                 <img class="img_container" id="affinity-diagram" src="images/affinity-diagram.jpg" alt="Reorganize Content">
-                <p>
-                    Location: Michigan State University, Independent Study
-                </p>
-                <p>
-                    Date: Jan 2019 - May 2019
-                </p>
-                <p>
-                    Collaborators: Katie Oeschger (Supporting UX Researcher)
-                </p>
-                <p>
-                    My role: Project Lead, UX Research, Content Design
-                </p>
-                <h3>
-                    The Challenge: What do students need to succeed?
-                </h3>
-                <p>
-                    How can university units be assured that their ever-changing student body is receiving the resources that students actually need?
-                </p>
-                <p>
-                    The department of Integrative Biology (IBIO) is home to more than 500 students majoring in Environmental Biology-Zoology, Integrative Biology, or Zoology. To help the greatest number of students, the department needed to become more strategic with its limited time and resources. The goal of this project was to understand what challenges department majors encounter and how to help these students achieve their academic and career goals.
-                </p>
-                <p>
-                    I helped initiate, designed, and led this project for the Department of Integrative Biology at Michigan State University. This project was approved by Michigan State University's Institutional Review Board.
-                </p>
-                <h3>
-                    Design Process
-                </h3>
-                <p>
-                    <strong>Discovery: </strong>What current resources exist? How do students use the website? Talking with real users. Device usage. Synthesizing interview data. Who makes up the student body? What is the student experience like?
-                </p>
-                <p>
-                    <strong>Ideation: </strong>Brainstorming solutions. Are competitors already implementing these ideas? Design recommendation. 
-                </p>
-                <p>
-                    <strong>Design: </strong>Improving usability & findability. Preliminary design ideas.
-                </p>
-                <p>
-                    <strong>Conclusion: </strong>Broader implications. Limitations. Future work.
-                </p>
+                <p>Location: Michigan State University, Independent Study</p>
+                <p>Date: Jan 2019 - May 2019</p>
+                <p>Collaborators: Katie Oeschger (Supporting UX Researcher)</p>
+                <p>My role: Project Lead, UX Research, Content Design</p>
+                <h3>The Challenge: What do students need to succeed?</h3>
+                <p>How can university units be assured that their ever-changing student body is receiving the resources that students actually need?</p>
+                <p>The department of Integrative Biology (IBIO) is home to more than 500 students majoring in Environmental Biology-Zoology, Integrative Biology, or Zoology. To help the greatest number of students, the department needed to become more strategic with its limited time and resources. The goal of this project was to understand what challenges department majors encounter and how to help these students achieve their academic and career goals.</p>
+                <p>I helped initiate, designed, and led this project for the Department of Integrative Biology at Michigan State University. This project was approved by Michigan State University's Institutional Review Board.</p>
+                <h3>Design Process</h3>
+                <p><strong>Discovery: </strong>What current resources exist? How do students use the website? Talking with real users. Device usage. Synthesizing interview data. Who makes up the student body? What is the student experience like?</p>
+                <p><strong>Ideation: </strong>Brainstorming solutions. Are competitors already implementing these ideas? Design recommendation. </p>
+                <p><strong>Design: </strong>Improving usability & findability. Preliminary design ideas.</p>
+                <p><strong>Conclusion: </strong>Broader implications. Limitations. Future work.</p>
                 <h3>Discovery</h3>
-                <p>
-                    <strong>Content audit + card sort</strong> - What current resources exist?
-                </p>
-                <p>
-                    The undergraduate section of the Integrative Biology Website included 43 webpages, nine of which were listed under the main navigation. The older webpages were very text heavy. The information architecture and user interface needed improvement.
-                </p>
-                <p>
-                    In the past year, only one new page was added, the Hands-On Opportunities Database. This database was developed based on real user needs.
-                </p>
-                <p>
-                    To understand how to restructure the website's information architecture, we asked students to complete a card sort activity. Each student participant was handed a stack of index cards (i.e., each card represented a page in the undergraduate section of the website) and asked to sort the cards in a way that makes sense to him/her. The purpose of this activity was to understand their mental models of the website's information architecture.
-                </p>
-                <p>
-                    Card sort data were analyzed by looking for themes and patterns.
-                </p>
-                <p>
-                    <strong>Web analytics</strong> - How do students use the website?
-                </p>
-                <p>
-                    One way to understand how people were using the website was to review the Google Analytics data.  I evaluated the top-visited pages, landing pages, exit pages, bounce rates, and the content drill down. I found similar patterns in the data across multiple years.
-                </p>
-                <p>
-                    The data suggested that users primarily accessed the website with their computer using Google. They used the search engine to go directly to the webpage of interest, circumventing the Homepage. These findings were later corroborated during student interviews. The top visited webpages are listed below.
-                </p>
-                <p>
-                    PUT THIS IN A LIST PLEASE: 1) undergrad degrees, 2) advising, 3)  overrides, 4) undergrad program, 5) hands-on opportunities database.
-                </p>
-                <p>
-                    <strong>Student interviews</strong> - Talking with real users
-                </p>
-                <p>
-                    My empathy and interpersonal skills have been exceptionally useful to build rapport with users quickly and collect valuable data. We interviewed 15 students from the Integrative Biology student body who met our participant profile. These participants were diverse across class standing, majors, gender, etc. We continued interviewing students until we reached the point of data saturation.
-                </p>
-                <p>
-                    During these interviews, we sought to understand topics such as: -How do students get the information they need for their majors? - Academic and career exploration challenges. - What MSU correspondence do they read? - Communication preferences. - User feedback on potential web design ideas and student resources that were currently in development.
-                </p>
-                <p>
-                    The interviews were audio-recorded and transcribed into affinity notes. The data were analyzed using flow models and an affinity diagram.
-                </p>
-                <p>
-                    <strong>Flow models</strong> - Device usage
-                </p>
-                <p>
-                    Flow models were created during each interview debriefing. Flow models were a quick, visual overview of the user's interview data. The sample flow models accompanying this text show a visual representation of communication mediums used by a student, how he/she used them, the relationships between these mediums, and relevant pain points (designated with an X).
-                </p>
-                <p>
-                    In general, students prefer to use a computer for academics. This finding was corroborated by web analytics. Students use their smartphones to look up quick information while they are on the go.
-                </p>
-                <p>
-                    <strong>Affinity diagram</strong> - Synthesizing interview data
-                </p>
-                <p>
-                    Interview data were analyzed using an affinity diagram, a hierarchical grouping of affinity notes. We selected an affinity diagram because: - It was an effective way to organize information across users to show common themes, challenges, and needs. - All data could be viewed in one place. - An affinity diagram allowed us to see patterns and themes in the data without losing the individual variation.
-                </p>
-                <p>
-                    The affinity diagram was comprised of ~1,500 affinity notes (note: the photo only shows half of the completed affinity diagram). Key insights from the affinity diagram are listed below.
-                </p>
-                <p>
-                    <strong>Themes for user data</strong>
-                </p>
-                <p>
-                    <i>Students are overwhelmed when they are provided too much information.</i> It’s hard for students to use websites with too much information. They only want information that is directly relevant to them. Poor content organization and formatting are a turnoff for students. For example, they get burned out reading a bunch of text on a webpage. Instead, they prefer visuals. Students also reported that they get confused if there are too many pages or navigation options to choose from. They prefer simple, and easy to use websites.
-                </p>
-                <p>
-                    <i>Students have a hard time finding the information they need. </i>Students only look for information when they need it. Students struggle to find the information they need because they either: - Don’t know where to go from information. - Don’t know what to search for. - Don’t know how to piece information together. - Don’t want to dig through a bunch of content to find the information they need. <bold>LIST HERE>>>>>>>>>>>>>>>> </bold> They reported that the IBIO website is hard to use. Students would prefer to start with fewer options and funnel down to get more information.
-                </p>
-                <p>
-                    <i>Students find it helpful when information is consolidated. </i>They like having all the information they need in one place. For example, students would like each major to have its own webpage which provides resources specific to that major (e.g., complimentary minors, careers, jobs, etc.). They also find hyperlinks very helpful.
-                </p>
-                <p>
-                    <i>Students don’t know what major is best for them. </i>Students explore majors by comparing curriculums online. They would like more information about the majors online to help them determine which major is the best fit for them.
-                </p>
-                <p>
-                    <i>Students have a hard time connecting their major to a career path. </i>Although students have begun career exploration, they don’t know what to do with their degree. They want to know what type of careers they can have with each curriculum, possible entry level jobs they can pursue, and the skill sets they need for these positions. They don’t understand graduate school.
-                    IBIO Students like to read examples of what their peers are doing with their major (or have done in the past). They said it would be helpful if there were stories about what alumni have done with their degree. They are also interested in learning about the career trajectories of their professors.
-                </p>
-                <p>
-                    <i>The best way to communicate with students via email. </i>Students reported that they check their email at least one time per day. The subject line and who the email is sent from dictates whether they open it;  they open emails related to their academics. The students like the IBIO Student eNewsletter and its current distribution schedule. => IBIO students don’t want to see school-related stuff on social media, and they don’t check the department website regularly.
+                <p><strong>Content audit + card sort</strong> - What current resources exist?</p>
+                <p>The undergraduate section of the Integrative Biology Website included 43 webpages, nine of which were listed under the main navigation. The older webpages were very text heavy. The information architecture and user interface needed improvement.</p>
+                <p>In the past year, only one new page was added, the Hands-On Opportunities Database. This database was developed based on real user needs.</p>
+                <p>To understand how to restructure the website's information architecture, we asked students to complete a card sort activity. Each student participant was handed a stack of index cards (i.e., each card represented a page in the undergraduate section of the website) and asked to sort the cards in a way that makes sense to him/her. The purpose of this activity was to understand their mental models of the website's information architecture.</p>
+                <p>Card sort data were analyzed by looking for themes and patterns.</p>
+                <p><strong>Web analytics</strong> - How do students use the website?</p>
+                <p>One way to understand how people were using the website was to review the Google Analytics data.  I evaluated the top-visited pages, landing pages, exit pages, bounce rates, and the content drill down. I found similar patterns in the data across multiple years.</p>
+                <p>The data suggested that users primarily accessed the website with their computer using Google. They used the search engine to go directly to the webpage of interest, circumventing the Homepage. These findings were later corroborated during student interviews. The top visited webpages are listed below.</p>
+                <p>PUT THIS IN A LIST PLEASE: 1) undergrad degrees, 2) advising, 3)  overrides, 4) undergrad program, 5) hands-on opportunities database.</p>
+                <p><strong>Student interviews</strong> - Talking with real users</p>
+                <p>My empathy and interpersonal skills have been exceptionally useful to build rapport with users quickly and collect valuable data. We interviewed 15 students from the Integrative Biology student body who met our participant profile. These participants were diverse across class standing, majors, gender, etc. We continued interviewing students until we reached the point of data saturation.</p>
+                <p>During these interviews, we sought to understand topics such as: -How do students get the information they need for their majors? - Academic and career exploration challenges. - What MSU correspondence do they read? - Communication preferences. - User feedback on potential web design ideas and student resources that were currently in development.</p>
+                <p>The interviews were audio-recorded and transcribed into affinity notes. The data were analyzed using flow models and an affinity diagram.</p>
+                <p><strong>Flow models</strong> - Device usage</p>
+                <p>Flow models were created during each interview debriefing. Flow models were a quick, visual overview of the user's interview data. The sample flow models accompanying this text show a visual representation of communication mediums used by a student, how he/she used them, the relationships between these mediums, and relevant pain points (designated with an X).</p>
+                <p>In general, students prefer to use a computer for academics. This finding was corroborated by web analytics. Students use their smartphones to look up quick information while they are on the go.</p>
+                <p><strong>Affinity diagram</strong> - Synthesizing interview data</p>
+                <p>Interview data were analyzed using an affinity diagram, a hierarchical grouping of affinity notes. We selected an affinity diagram because: - It was an effective way to organize information across users to show common themes, challenges, and needs. - All data could be viewed in one place. - An affinity diagram allowed us to see patterns and themes in the data without losing the individual variation.</p>
+                <p>The affinity diagram was comprised of ~1,500 affinity notes (note: the photo only shows half of the completed affinity diagram). Key insights from the affinity diagram are listed below.</p>
+                <p><strong>Themes for user data</strong></p>
+                <p><i>Students are overwhelmed when they are provided too much information.</i> It’s hard for students to use websites with too much information. They only want information that is directly relevant to them. Poor content organization and formatting are a turnoff for students. For example, they get burned out reading a bunch of text on a webpage. Instead, they prefer visuals. Students also reported that they get confused if there are too many pages or navigation options to choose from. They prefer simple, and easy to use websites.</p>
+                <p><i>Students have a hard time finding the information they need. </i>Students only look for information when they need it. Students struggle to find the information they need because they either: - Don’t know where to go from information. - Don’t know what to search for. - Don’t know how to piece information together. - Don’t want to dig through a bunch of content to find the information they need. <bold>LIST HERE>>>>>>>>>>>>>>>> </bold> They reported that the IBIO website is hard to use. Students would prefer to start with fewer options and funnel down to get more information.</p>
+                <p><i>Students find it helpful when information is consolidated. </i>They like having all the information they need in one place. For example, students would like each major to have its own webpage which provides resources specific to that major (e.g., complimentary minors, careers, jobs, etc.). They also find hyperlinks very helpful.</p>
+                <p><i>Students don’t know what major is best for them. </i>Students explore majors by comparing curriculums online. They would like more information about the majors online to help them determine which major is the best fit for them.</p>
+                <p><i>Students have a hard time connecting their major to a career path. </i>Although students have begun career exploration, they don’t know what to do with their degree. They want to know what type of careers they can have with each curriculum, possible entry level jobs they can pursue, and the skill sets they need for these positions. They don’t understand graduate school.
+                IBIO Students like to read examples of what their peers are doing with their major (or have done in the past). They said it would be helpful if there were stories about what alumni have done with their degree. They are also interested in learning about the career trajectories of their professors.</p>
+                <p><i>The best way to communicate with students via email. </i>Students reported that they check their email at least one time per day. The subject line and who the email is sent from dictates whether they open it;  they open emails related to their academics. The students like the IBIO Student eNewsletter and its current distribution schedule. => IBIO students don’t want to see school-related stuff on social media, and they don’t check the department website regularly.
                 </p>
                 <h3>Ideation</h3>
-                <p>
-                    <strong>Sketching</strong> - Brainstorming solutions
-                </p>
-                <p>
-                    We generated more than 200 design ideas from user data. Sketching was used to brainstorm, capture, explore, and communicate my ideas. Ideas ranged from hosting student assemblies (with optional live streaming) or redesigning the curriculum to website enhancements. Design ideas were prioritized.
-                </p>
-                <p>
-                    <strong>Competitive analysis</strong> - Are compedtitors already implementing these ideas?
-                </p>
-                <p>
-                    I conducted a competitive analysis to get a better understanding of how MSU's Department of Integrative Biology's web presence compared with its namesake competitors across the United States. Only ten departments with the name 'Integrative Biology' were identified. All ten were included in the competitive analysis. The features compared across the websites were based on user data and potential design ideas for this project.
-                </p>
-                <p>
-                    Findings suggest that most Integrative Biology Department websites provide their students with sample course plans and a course list, two areas where MSU is lacking. In general, these websites included very basic information for undergraduates and either limited to zero information about career preparation (a high priority topic to department undergraduates). None of the websites included in the competitive analysis had modern web designs. Similar to MSU's current IBIO website, these websites were text-heavy and provided limited visuals. Overall, I discovered that many of my design ideas generated from the affinity diagram have not been implemented by MSU's competitors.
-                </p>
-                <p>
-                    Recommendation: <strong>A website redesign</strong>
-                </p>
-                <p>
-                    A website driven by human-centered design is a powerful tool that had not been fully leveraged by the Department of Integrative Biology. The few webpages that were created based on user needs in the past have been very successful.
-                </p>
-                <p>
-                    Redesigning the website (e.g., information architecture, content, and design) was the first step to bolster the academic and career success of department majors. The data suggested that students rely on the website as a reference. Improving the website could reduce the cognitive load of users and create an easy to use, informative, and enjoyable user interface for students. Providing students with useful, online resources could also help reduce the overwhelmed advising workload and serve as helpful artifacts for advisors to reference during advising appointments.
-                </p>
-                <p>
-                    Enhancements began with high priority features that students could not find elsewhere.
-                </p>
+                <p><strong>Sketching</strong> - Brainstorming solutions</p>
+                <p>We generated more than 200 design ideas from user data. Sketching was used to brainstorm, capture, explore, and communicate my ideas. Ideas ranged from hosting student assemblies (with optional live streaming) or redesigning the curriculum to website enhancements. Design ideas were prioritized.</p>
+                <p><strong>Competitive analysis</strong> - Are compedtitors already implementing these ideas?</p>
+                <p>I conducted a competitive analysis to get a better understanding of how MSU's Department of Integrative Biology's web presence compared with its namesake competitors across the United States. Only ten departments with the name 'Integrative Biology' were identified. All ten were included in the competitive analysis. The features compared across the websites were based on user data and potential design ideas for this project.</p>
+                <p>Findings suggest that most Integrative Biology Department websites provide their students with sample course plans and a course list, two areas where MSU is lacking. In general, these websites included very basic information for undergraduates and either limited to zero information about career preparation (a high priority topic to department undergraduates). None of the websites included in the competitive analysis had modern web designs. Similar to MSU's current IBIO website, these websites were text-heavy and provided limited visuals. Overall, I discovered that many of my design ideas generated from the affinity diagram have not been implemented by MSU's competitors.</p>
+                <p>Recommendation: <strong>A website redesign</strong></p>
+                <p>A website driven by human-centered design is a powerful tool that had not been fully leveraged by the Department of Integrative Biology. The few webpages that were created based on user needs in the past have been very successful.</p>
+                <p>Redesigning the website (e.g., information architecture, content, and design) was the first step to bolster the academic and career success of department majors. The data suggested that students rely on the website as a reference. Improving the website could reduce the cognitive load of users and create an easy to use, informative, and enjoyable user interface for students. Providing students with useful, online resources could also help reduce the overwhelmed advising workload and serve as helpful artifacts for advisors to reference during advising appointments.</p>
+                <p>Enhancements began with high priority features that students could not find elsewhere.</p>
                 <h3>Design</h3>
-                <p>
-                    <strong>Sitemap</strong> - Improving usability & findability
-                </p>
+                <p><strong>Sitemap</strong> - Improving usability & findability</p>
                 <p>Using student data, the information architecture and content organization of the website (i.e., the undergraduate section only) were redesigned to align with students' mental models. The total webpages were reduced from 43 to 27, and every webpage can be reached in 3 clicks or less.</p>
-                <p>
-                    <strong>Content design</strong> - preliminary design ideas
-                </p>
-                <p>
-                    I began designing the website with a paper prototype because it was a quick way to work out our design ideas. I rewrote all the headers and web copy to be simple, and straightforward. More than 50% of the old web copy was eliminated.
-                </p>
-                <p>
-                    Scans of the paper prototype were uploaded into MarvelPop, a tool that makes sketches interactive like a real website. I conducted moderated usability testing with ten students who were pursuing majors offered by the Department. => Overall, student feedback was positive. Students reported that the prototype was much easier to navigate than the pre-existing website (average student usability rating was 8.1 of 10). In fact, one student said, "I really like it. I want to use it right now. It's a lot easier for arranging my internship."The average completion rate across scenarios was 73%.
-                </p>
-                <p>
-                    The big takeaway was that some of the designs included too much text. Feedback was incorporated into the next iteration of the prototype.
-                </p>
+                <p><strong>Content design</strong> - preliminary design ideas</p>
+                <p>I began designing the website with a paper prototype because it was a quick way to work out our design ideas. I rewrote all the headers and web copy to be simple, and straightforward. More than 50% of the old web copy was eliminated.</p>
+                <p>Scans of the paper prototype were uploaded into MarvelPop, a tool that makes sketches interactive like a real website. I conducted moderated usability testing with ten students who were pursuing majors offered by the Department. => Overall, student feedback was positive. Students reported that the prototype was much easier to navigate than the pre-existing website (average student usability rating was 8.1 of 10). In fact, one student said, "I really like it. I want to use it right now. It's a lot easier for arranging my internship."The average completion rate across scenarios was 73%.</p>
+                <p>The big takeaway was that some of the designs included too much text. Feedback was incorporated into the next iteration of the prototype.</p>
                 <h3>Conclusion</h3>
-                <p>
-                    The findings suggest that students in the Department of Integrative Biology struggled to find the information they need for their major and career preparation. These students were overwhelmed by excessive information and they struggle to synthesize information. They want content directly relevant to their academics and career interests
-                </p>
-                <p>
-                    Students were really excited about new features that emerged from our research insights. For example, one new feature is a webpage that compares, in detail, all the department majors. A usability participant commented, "That's perfect. That's what I always wanted. It would save me hours." Students also liked that many academic resources that could only be accessed in person will also be available online. The impact is threefold: (1) access to critical major information will be more equitable and accessible to all students, (2) students will have more options for academic support to accommodate their needs and lifestyles, and (3) decrease the demanding workload of academic advisors.
-                </p>
-                <p>
-                    Overall, student feedback was very positive. In fact, one student asserted, "It's what I hoped it would be." When students were asked how likely they would recommend this new website to a fellow student in their major (during usability testing), their average rating was a 9.5 out of 10, with 10 being the highest score possible. 
-                </p>
-                <p>
-                    Most surprising and complimentary was the noted comparison of this new design with other websites across the Michigan State University campus by students and colleagues. A student mentioned, "If I had this, school would be easier. It's way more user friendly than any other MSU website. It has everything you need from starting here, classes, to find careers. It would be great for other majors across campus." Meanwhile, an academic advisor (from another unit) who happened to see the prototype told me, "I've seen a lot of webpages in my nine years of advising at MSU. This one is by far the best I've seen."
-                </p>
-                <p>
-                    <strong>Broader implications</strong>
-                </p>
-                <p>
-                    The implications of this project extended beyond what was initially expected. The data, findings, and design ideas generated from this project: - Helped guide the department's strategic planning. - Was used as evidence of the department's commitment to student success in Integrative Biology's [undergraduate] annual program report that has been reviewed by the College of Natural Science's leadership. - The data fostered the development of a new freshman course that has been incorporated into the department's undergraduate curriculum. This new course connects students with peers and department faculty sooner in their academic careers.
-                </p>
-                <p>
-                    We also discovered that Integrative Biology has been doing some things well: - All the participants really liked the IBIO Student eNewletter. - Students have found the IBIO Hands-On Opportunities Database to be useful. Enhancements were suggested to make this database even more useful and easier to use.
-                </p>
-                <p>
-                    <strong>Limitations</strong>
-                </p>
-                <p>
-                    Like any study, there were limitations. For example, you can only learn so much from interviews. What people say and what they do don't necessarily align. For example, some students said they used FAQs, but then they contradicted themselves later in the interview. If I could do the project over again, I would have supplemented the interviews with a diary study to better capture needs and technology usage. => Another limitation of the project was that students were only recruited using email. In the future, we should also recruit students by making announcements in MSU classrooms. It is possible that our results may have been biased towards students that read their email.
-                </p>
-                <p>
-                    <strong>Future work</strong>
-                </p>
-                <p>
-                    In the future, I plan build the high-fidelity prototype in the department's content management system using HTML & CSS. Once a final product is launched, then lower priority design ideas can be explored.
-                </p>
-                <p> 
-                    Additionally, I would like to conduct a parallel project with the department's graduate students. I've reviewed the Google Analytics data for the graduate webpages, but I want to dig deeper. How the graduate students currently use the Integrative Biology website and how they would like to use it (i.e., if changes were made) may not align.
-                </p>
-
+                <p>The findings suggest that students in the Department of Integrative Biology struggled to find the information they need for their major and career preparation. These students were overwhelmed by excessive information and they struggle to synthesize information. They want content directly relevant to their academics and career interests</p>
+                <p>Students were really excited about new features that emerged from our research insights. For example, one new feature is a webpage that compares, in detail, all the department majors. A usability participant commented, "That's perfect. That's what I always wanted. It would save me hours." Students also liked that many academic resources that could only be accessed in person will also be available online. The impact is threefold: (1) access to critical major information will be more equitable and accessible to all students, (2) students will have more options for academic support to accommodate their needs and lifestyles, and (3) decrease the demanding workload of academic advisors.</p>
+                <p>Overall, student feedback was very positive. In fact, one student asserted, "It's what I hoped it would be." When students were asked how likely they would recommend this new website to a fellow student in their major (during usability testing), their average rating was a 9.5 out of 10, with 10 being the highest score possible. </p>
+                <p>Most surprising and complimentary was the noted comparison of this new design with other websites across the Michigan State University campus by students and colleagues. A student mentioned, "If I had this, school would be easier. It's way more user friendly than any other MSU website. It has everything you need from starting here, classes, to find careers. It would be great for other majors across campus." Meanwhile, an academic advisor (from another unit) who happened to see the prototype told me, "I've seen a lot of webpages in my nine years of advising at MSU. This one is by far the best I've seen."</p>
+                <p><strong>Broader implications</strong></p>
+                <p>The implications of this project extended beyond what was initially expected. The data, findings, and design ideas generated from this project: - Helped guide the department's strategic planning. - Was used as evidence of the department's commitment to student success in Integrative Biology's [undergraduate] annual program report that has been reviewed by the College of Natural Science's leadership. - The data fostered the development of a new freshman course that has been incorporated into the department's undergraduate curriculum. This new course connects students with peers and department faculty sooner in their academic careers.</p>
+                <p>We also discovered that Integrative Biology has been doing some things well: - All the participants really liked the IBIO Student eNewletter. - Students have found the IBIO Hands-On Opportunities Database to be useful. Enhancements were suggested to make this database even more useful and easier to use.</p>
+                <p><strong>Limitations</strong></p>
+                <p>Like any study, there were limitations. For example, you can only learn so much from interviews. What people say and what they do don't necessarily align. For example, some students said they used FAQs, but then they contradicted themselves later in the interview. If I could do the project over again, I would have supplemented the interviews with a diary study to better capture needs and technology usage. => Another limitation of the project was that students were only recruited using email. In the future, we should also recruit students by making announcements in MSU classrooms. It is possible that our results may have been biased towards students that read their email.</p>
+                <p><strong>Future work</strong></p>
+                <p>In the future, I plan build the high-fidelity prototype in the department's content management system using HTML & CSS. Once a final product is launched, then lower priority design ideas can be explored.</p>
+                <p> Additionally, I would like to conduct a parallel project with the department's graduate students. I've reviewed the Google Analytics data for the graduate webpages, but I want to dig deeper. How the graduate students currently use the Integrative Biology website and how they would like to use it (i.e., if changes were made) may not align.</p>
             </div>
             <div class="card" id="text">
                 <h2 class="store-title">Redesigning Physical Space - MSU Computer Center</h2>
                 <img class="img_container_b" id="space-design" src="images/space-design.jpg" alt="MSU Computer Center">
-                <p>
-                    Location: Michigan State University, AL 242 - Intro to Experience Architecture
-                </p>
-                <p>
-                    Date: April 2018 - May 2018
-                </p>
-                <p>
-                    Collaborators: MSU Computer Center Team
-                </p>
-                <p>
-                    Goal: The goal of this project was to work with a local vendor and redesign a physical space on a budget. Michigan State's Computer Center was dark, small, and cramped and it was my personal goal to transform into an light and inviting place for people to come and have maintenance done on their laptops or shop for more technology.
-                </p>
-                <p>
-                    Roles: With my team primarily focused on marketing and redesigning the Computer Center's website, I was responsible for redesigning the physical space. My roles included gathering space dimensions and blueprints, researching successful stores layouts, talking with the Computer Center team to find out their main goals with the space, discover the primary pain points, design a new space that meets the user's needs, and finally construct a miniature prototype of the building. I also had to present my prototype to the class and the Computer Center Team.
-                </p>
-                <p>
-                    Outcomes: It was a success. The Computer Center Team loved my redesign of the space, including the lighter, brighter color scheme, reuse of materials, and the Apple store display theme I was going for. My prototype was actually scalable to the real space. Unfortunately, the Computer Center moved to a new location the following year but this project was designed for learning purposes only.
-                </p>
-                <p>
-                    What I Learned: I learned how critical color, lighting, and layout are in a space. I learned how to scale down the dimensions of a building and build my own prototype out of styrafoam, paint, and glue. Some new skills I acquired were how to work with a budget, and how to interact with the clients to gain more information about their wants and needs as a user.
-                </p>
+                <p>Location: Michigan State University, AL 242 - Intro to Experience Architecture</p>
+                <p>Date: April 2018 - May 2018</p>
+                <p>Collaborators: MSU Computer Center Team</p>
+                <p>Goal: The goal of this project was to work with a local vendor and redesign a physical space on a budget. Michigan State's Computer Center was dark, small, and cramped and it was my personal goal to transform into an light and inviting place for people to come and have maintenance done on their laptops or shop for more technology.</p>
+                <p>Roles: With my team primarily focused on marketing and redesigning the Computer Center's website, I was responsible for redesigning the physical space. My roles included gathering space dimensions and blueprints, researching successful stores layouts, talking with the Computer Center team to find out their main goals with the space, discover the primary pain points, design a new space that meets the user's needs, and finally construct a miniature prototype of the building. I also had to present my prototype to the class and the Computer Center Team.</p>
+                <p>Outcomes: It was a success. The Computer Center Team loved my redesign of the space, including the lighter, brighter color scheme, reuse of materials, and the Apple store display theme I was going for. My prototype was actually scalable to the real space. Unfortunately, the Computer Center moved to a new location the following year but this project was designed for learning purposes only.</p>
+                <p>What I Learned: I learned how critical color, lighting, and layout are in a space. I learned how to scale down the dimensions of a building and build my own prototype out of styrafoam, paint, and glue. Some new skills I acquired were how to work with a budget, and how to interact with the clients to gain more information about their wants and needs as a user.</p>
             </div>
         </div>
     </div> 
